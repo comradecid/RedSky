@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+There are innumerable weather apps, sites, and features in the world dishing out a view the coming week's weather. While they all cover the critical basics (temperature and notable weather on each day, etc.), most of the other info they spit out isn't terribly helpful. Knowing the barometric pressure or UV index or radar profile isn't as valuable as answers to common questions such as these:
 
-You can use the [editor on GitHub](https://github.com/comradecid/redsky/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+> Will I need an umbrella today?
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+> What clothes or gear should I pack for my trip?
 
-### Markdown
+> Is it too muggy to go jogging today?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+> How much sunlight will I have for my photoshoot?
 
-```markdown
-Syntax highlighted code block
+In response, this project offers a stab at something a little more clever. It looks at the weather data and makes judgements and recommendations based on what it sees. It doesn't bother giving details that don't matter, and instead just hands off the few things you really want to know.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Using it, dependencies, and all that
 
-1. Numbered
-2. List
+Just download it, and unzip it in a webserver directory with an active internet connection. Everything you need is included; just open index.html.
 
-**Bold** and _Italic_ and `Code` text
+When you run it, you're presented with the weather of a default city; you can change this setting using the main app menu. You can view the details for each day by tapping on it; the stats you see on the overlays are expanded to show more info. It's all pretty self-explanatory.
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## How it works
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/comradecid/redsky/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Features it doesn't yet have, but should
+
+Given that I've spit this out in a super-short timeframe, there's a bunch of stuff I didn't manage to get in. Here are notable items:
