@@ -13,7 +13,7 @@ There are innumerable weather apps, sites, and features in the world dishing out
 - How much sunlight will I have for my photoshoot?
 ```
 
-In response, this project offers a stab at something a little more clever. It looks at the weather data and makes judgements and recommendations based on what it sees. It doesn't bother giving details that don't matter, and instead just hands off the few things you really want to know.
+In response, this project offers a stab at something a little more clever. It looks at weather data and makes judgements and recommendations based on what it sees. It doesn't bother giving details that don't matter, and instead just hands off the few things you really want to know.
 
 
 ## Using it, dependencies, and all that jazz
