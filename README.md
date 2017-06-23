@@ -22,6 +22,9 @@ In response, this project offers a stab at something a little more clever. It lo
 
 2. When you run it, you'll see the weather for a default city, which you can change via the menu. Tap on a day to see more detailed info. It's all pretty self-explanatory. Pay attention to fancy details like the city skylines changing for each city — I spent a lot of time on all that.
 
+![Example week in desktop view](http://comradecid.com/media/redsky_desktop.png)
+Example week in desktop view
+
 
 ## How it works
 
