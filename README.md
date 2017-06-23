@@ -55,10 +55,10 @@ These are then presented iconographically in each day summary in the default vie
 
 Given that I've spit this out in a super-short timeframe, there's a bunch of stuff I didn't manage to get in. Here are notable items:
 
+* Using the more expensive API call to do the heavy-lifting on getting day-by-day data, as opposed to doing a quick-and-dirty version myself. This is also important, as the current API returns partial data for some days, leading to incorrect values in the UI. :(
 * Migrating key portions of the codebase to use more advanced (yet heavyweight) solutions, such as LESS/SASS for CSS, React.js to leverage JSX, etc. This would make long-term management and editing far easier.
 * Additional helpful weather heuristics, such as 'smogginess' (air quality index), 'iciness', 'feels like', 'put on sunscreen' (UV index), 'when is golden hour' (for photographers), etc.
 * Fold in error-handling all over the place, to avoid snafus; current build is fragile for lack of it.
-* Using the more expensive API call to do the heavy-lifting on getting day-by-day data, as opposed to doing a quick-and-dirty version myself.
 * Finding some way to use geolocation to grab user's current location, which is tricky given that I'd have to a side-call to Google Maps or something to figure out what the current 'city' is (if any).
 * Full city list, and the ability to search for and select the cities you want to track.
 * Ability to view day as it is in the timezone of the target city (currently, it shows what that day is in the user's _local_ timezone).
