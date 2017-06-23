@@ -32,9 +32,23 @@ I built this using an idiotically small amount of code using a very basic stack,
 
 The core code is mostly 'autonomic': it effectively doesn't know or care what information it's dishing out. It also doesn't use much logic to do this, because it really doesn't need to. Instead, most of the action happens in the configurable logic that extends it, especially around interpreting weather data (provided by an API call to [OpenWeatherMap](http://openweathermap.org/forecast5)). Once interpreted and 'boiled down' to a more simplified version, this data is handed off to [Handlebars](http://handlebarsjs.com) templates, whose sorry job is to do the legwork and spit out UI updates.
 
-The interpretation routine itself runs through the data set, applying arbitrary rules to arrive at targeted judgements and summaries. This process is tailored to the particular conventions and usage limitations presented by the OpenWeatherMap API, including emulating logic that I couldn't pay for (i.e., the [$180/month plan](http://openweathermap.org/price), and its fancy day-level rollups of temperature and significant weather conditions). Alas.
+The interpretation routine itself runs through the data set, applying arbitrary rules to arrive at targeted judgments and summaries. This process is tailored to the particular conventions and usage limitations presented by the OpenWeatherMap API, including emulating logic that I couldn't pay for (i.e., the [$180/month plan](http://openweathermap.org/price), and its fancy day-level rollups of temperature and significant weather conditions). Alas.
 
-The routine uses the following steps:
+The aforementioned 'targeted judgments and summaries' for each day include:
+
+ * Representative temperature
+ * Highest temperature
+ * Lowest temperature
+ * Representative weather condition	
+ * Will there be rain?
+ * Will there be snow?
+ * Will there be high wind?
+ * Will it be 'muggy'?
+ * Will it be 'hot'?
+ * Will it be 'cold'?
+ * Will it be 'bitingly cold'?
+
+These are then presented iconographically in each day summary in the default view, and more descriptively in the details view for each day. This allows quick perusal of key takeaways, making the summary immediately actionable without significant further perusal.
 
 
 ## Features it doesn't yet have, but should
