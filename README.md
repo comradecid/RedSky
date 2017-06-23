@@ -55,7 +55,7 @@ These are then presented iconographically in each day summary in the default vie
 
 Given that I've spit this out in a super-short timeframe, there's a bunch of stuff I didn't manage to get in. Here are notable items:
 
-* Migrating key files to use preprocessing, such as LESS/SASS for CSS, React.js to handle UI via JSX, etc. This would make long-term management and editing far easier.
+* Migrating key portions of the codebase to use more advanced (yet heavyweight) solutions, such as LESS/SASS for CSS, React.js to leverage JSX, etc. This would make long-term management and editing far easier.
 * Additional helpful weather heuristics, such as 'smogginess' (air quality index), 'iciness', 'feels like', 'put on sunscreen' (UV index), 'when is golden hour' (for photographers), etc.
 * Using the more expensive API call to do the heavy-lifting on getting day-by-day data, as opposed to doing a quick-and-dirty version myself.
 * Finding some way to use geolocation to grab user's current location, which is tricky given that I'd have to a side-call to Google Maps or something to figure out what the current 'city' is (if any).
