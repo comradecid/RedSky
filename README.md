@@ -48,7 +48,7 @@ The aforementioned 'targeted judgments and summaries' for each day include:
  * Will it be 'cold'?
  * Will it be 'bitingly cold'?
 
-These are then presented iconographically in each day summary in the default view, and more descriptively in the details view for each day. This allows quick perusal of key takeaways, making the summary immediately actionable without significant further perusal.
+These are then presented iconographically in each day summary in the default view, and more descriptively in the details view for each day. This allows quick perusal of key takeaways, making the summary immediately actionable without significant further perusal. It doesn't display specific values for many metrics (e.g., barometric pressure, wind direction, etc.) assuming them to be outside of its purview. This approach also feeds into the visual presentation of weather conditions, which are designed to give users at-a-glance slices of the week, complete with varying light levels and obvious precipitation.
 
 
 ## Features it doesn't yet have, but should
