@@ -60,6 +60,7 @@ Given that I've spit this out in a super-short timeframe, there's a bunch of stu
 * Using the more expensive API call to do the heavy-lifting on getting day-by-day data, as opposed to doing a quick-and-dirty version myself.
 * Finding some way to use geolocation to grab user's current location, which is tricky given that I'd have to a side-call to Google Maps or something to figure out what the current 'city' is (if any).
 * Full city list, and the ability to search for and select the cities you want to track.
+* Ability to view day as it is in the timezone of the target city (currently, it shows what that day is in the user's _local_ timezone).
 * Swipe-to-navigate, and the ability to move farther ahead in time.
 * Better handling errors due to broken connections (current just fails quietly, displaying a blank skybox).
 
