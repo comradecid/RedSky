@@ -63,4 +63,4 @@ Given that I've spit this out in a super-short timeframe, there's a bunch of stu
 * Swipe-to-navigate, and the ability to move farther ahead in time.
 * Better handling errors due to broken connections (current just fails quietly, displaying a blank skybox).
 
-I hope you enjoy it - have fun tinkering with it :)
+In the meantime, have fun tinkering with it :smile:
