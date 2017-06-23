@@ -55,6 +55,7 @@ These are then presented iconographically in each day summary in the default vie
 
 Given that I've spit this out in a super-short timeframe, there's a bunch of stuff I didn't manage to get in. Here are notable items:
 
+* Ability to switch between Fahrenheit and Celsius. Ran out of time on that one; it only shows Fahrenheit rn.
 * Using the more expensive API call to do the heavy-lifting on getting day-by-day data, as opposed to doing a quick-and-dirty version myself. This is also important, as the current API returns partial data for some days, leading to incorrect values in the UI. :(
 * Migrating key portions of the codebase to use more advanced (yet heavyweight) solutions, such as LESS/SASS for CSS, React.js to leverage JSX, etc. This would make long-term management and editing far easier.
 * Additional helpful weather heuristics, such as 'windy', 'bitingly cold' (wind chill factor), 'smogginess' (air quality index), 'iciness', 'feels like', 'put on sunscreen' (UV index), 'when is golden hour' (for photographers), etc.
