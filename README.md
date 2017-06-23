@@ -57,6 +57,7 @@ Given that I've spit this out in a super-short timeframe, there's a bunch of stu
 
 * Migrating key portions of the codebase to use more advanced (yet heavyweight) solutions, such as LESS/SASS for CSS, React.js to leverage JSX, etc. This would make long-term management and editing far easier.
 * Additional helpful weather heuristics, such as 'smogginess' (air quality index), 'iciness', 'feels like', 'put on sunscreen' (UV index), 'when is golden hour' (for photographers), etc.
+* Fold in error-handling all over the place, to avoid snafus; current build is fragile for lack of it.
 * Using the more expensive API call to do the heavy-lifting on getting day-by-day data, as opposed to doing a quick-and-dirty version myself.
 * Finding some way to use geolocation to grab user's current location, which is tricky given that I'd have to a side-call to Google Maps or something to figure out what the current 'city' is (if any).
 * Full city list, and the ability to search for and select the cities you want to track.
