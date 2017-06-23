@@ -54,3 +54,13 @@ These are then presented iconographically in each day summary in the default vie
 ## Features it doesn't yet have, but should
 
 Given that I've spit this out in a super-short timeframe, there's a bunch of stuff I didn't manage to get in. Here are notable items:
+
+* Migrating key files to use preprocessing, such as LESS/SASS for CSS, React.js to handle UI via JSX, etc. This would make long-term management and editing far easier.
+* Additional helpful weather heuristics, such as 'smogginess' (air quality index), 'iciness', 'feels like', 'put on sunscreen' (UV index), 'when is golden hour' (for photographers), etc.
+* Using the more expensive API call to do the heavy-lifting on getting day-by-day data, as opposed to doing a quick-and-dirty version myself.
+* Finding some way to use geolocation to grab user's current location, which is tricky given that I'd have to a side-call to Google Maps or something to figure out what the current 'city' is (if any).
+* Full city list, and the ability to search for and select the cities you want to track.
+* Swipe-to-navigate, and the ability to move farther ahead in time.
+* Better handling errors due to broken connections (current just fails quietly, displaying a blank skybox).
+
+I hope you enjoy it - have fun tinkering with it :)
