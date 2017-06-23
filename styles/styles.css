@@ -1,0 +1,629 @@
+/* Less commonly used light variant */
+@font-face {
+  font-family: 'GothamXL';
+  src: url('../fonts/eot/GothamThi.eot');
+  src: url('../fonts/eot/GothamThi.eot') format('embedded-opentype'),
+/*        url('../fonts/woff/GothamThi.woff') format('woff'), */
+       url('../fonts/ttf/GothamThi.ttf') format('truetype'),
+       url('../fonts/svg/GothamThi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Lightweight body font */
+@font-face {
+  font-family: 'GothamL';
+  src: url('../fonts/eot/GothamLig.eot');
+  src: url('../fonts/eot/GothamLig.eot') format('embedded-opentype'),
+/*        url('../fonts/woff/GothamLig.woff') format('woff'), */
+       url('../fonts/ttf/GothamLig.ttf') format('truetype'),
+       url('../fonts/svg/GothamLig.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Default body font */
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/eot/GothamBoo.eot');
+  src: url('../fonts/eot/GothamBoo.eot') format('embedded-opentype'),
+/*        url('../fonts/woff/GothamBoo.woff') format('woff'), */
+       url('../fonts/ttf/GothamBoo.ttf') format('truetype'),
+       url('../fonts/svg/GothamBoo.svg') format('svg');
+  font-style: normal;
+}
+
+/* Heavyweight body font */
+@font-face {
+  font-family: 'GothamB';
+  src: url('../fonts/eot/GothamMed.eot');
+  src: url('../fonts/eot/GothamMed.eot') format('embedded-opentype'),
+/*        url('../fonts/woff/GothamMed.woff') format('woff'), */
+       url('../fonts/ttf/GothamMed.ttf') format('truetype'),
+       url('../fonts/svg/GothamMed.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Less commonly used heavy variant */
+@font-face {
+  font-family: 'GothamXB';
+  src: url('../fonts/eot/GothamBol.eot');
+  src: url('../fonts/eot/GothamBol.eot') format('embedded-opentype'),
+/*        url('../fonts/woff/GothamBol.woff') format('woff'), */
+       url('../fonts/ttf/GothamBol.ttf') format('truetype'),
+       url('../fonts/svg/GothamBol.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* ---- */
+
+body {
+  color: #fff;
+  font-family: 'GothamL', Helvetica, Arial, sans-serif;
+  background-color: #333;
+  margin: 0;
+}
+
+h1 {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'GothamXL', Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+h1 #cityname {
+  display: inline-block;
+/*   text-transform: uppercase; */
+  font-family: 'Gotham', Helvetica, Arial, sans-serif;
+  padding: 0 .15em;
+  margin: 0 .2em;
+  cursor: pointer;
+  transition: background-color .25s;
+}
+
+h1 #cityname:hover, #menu > ul > li > div:hover {
+  background-color: rgba(255, 255, 255, .15);
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  position: fixed;
+  z-index: 255;
+  width: 100%;
+  height: 10rem;
+  background-color: rgba(51, 51, 51, 0);
+  margin: 0;
+  -webkit-transition: all .65s;
+  transition: all .65s;
+}
+
+header.expanded {
+  background-color: rgba(51, 51, 51, 1);
+  height: 100%;
+}
+
+header .layout {
+  display: table;
+  width: 100%;
+  padding: 3.5rem 0 3rem 0;
+  margin: 0 auto;
+}
+
+header .layout > div {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+#days, #menu > ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+#menu {
+  display: none;
+}
+
+#menu > ul {
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0;
+  align-content: flex-start;
+  margin: 0 auto;
+}
+
+#menu > ul > li {
+  flex-basis: 33%;
+  flex-grow: 0;
+  padding: .75rem 0;
+}
+
+#menu > ul > li > div {
+  display: inline-block;
+  padding: .5rem;
+  margin: 0 1rem 0 0;
+}
+
+header .layout, 
+#redsky > div, 
+#menu > ul {
+  max-width: 64rem;
+  min-width: 30rem;
+}
+
+#redsky {
+  position: relative;
+  top: 10rem;
+  width: 100%;
+  height: 30rem;
+  background: #406892;
+  background: -moz-linear-gradient(top, #406892 0%, #3c8ebf 35%, #82b8d0 100%);
+  background: -webkit-linear-gradient(top, #406892 0%,#3c8ebf 35%,#82b8d0 100%);
+  background: linear-gradient(to bottom, #406892 0%,#3c8ebf 35%,#82b8d0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#406892', endColorstr='#82b8d0',GradientType=0 );
+  margin: 0;
+  box-shadow: inset 0 -5rem 5rem -2rem rgba(0, 0, 0, 0.25);
+}
+
+#redsky > div {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#redsky.night {
+}
+
+#redsky > div > div {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  opacity: .25;
+  margin: 0 auto;
+}
+
+#days {
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0 2rem;
+}
+
+#days > li {
+  position: relative;
+  flex-grow: 1;
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  border-left: solid thin rgba(51, 51, 51, .2);
+  border-right: solid thin rgba(51, 51, 51, .2);
+  padding: 0;
+  margin: 0;
+  -webkit-transition: all .65s;
+  transition: all .65s;
+  background-position: 25% 30%;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  overflow: hidden;
+}
+
+/* Various weather conditions; these need handling via a spritesheet */
+#days > li.partlycloudy { background-image: url('../images/content/weather_clouds.png'); }
+#days > li.cloudy { background-image: url('../images/content/weather_overcast.png'); background-color: rgba(10, 10, 15, .0625); }
+#days > li.partlysunny { background-image: url('../images/content/weather_partlysunny.png'); background-color: rgba(10, 10, 15, .0625); }
+#days > li.rainy { background-image: url('../images/content/weather_rainy.png'); background-color: rgba(10, 10, 15, .125); }
+#days > li.sunny { background-image: url('../images/content/weather_sunny.png'); }
+#days > li.thunderstorm { background-image: url('../images/content/weather_thunder.png'); background-color: rgba(10, 10, 15, .125); }
+#days > li.snow { background-image: url('../images/content/weather_snow.png'); background-color: rgba(10, 10, 15, .125); }
+
+
+/* ---- */
+
+#days.details > li {
+  flex-basis: 0%;
+  flex-shrink: 1;
+  flex-grow: 0;
+  border: none;
+}
+
+#days.details > li.expanded {
+  flex-shrink: 0;
+  flex-grow: 1;
+  text-align: left;
+  border-left: solid thin rgba(51, 51, 51, .2);
+  border-right: solid thin rgba(51, 51, 51, .2);
+  background-position: 15% auto;
+  background-size: auto 65%;
+}
+
+#days.details > li.expanded .stats {
+  width: auto;
+  margin: 0 2.5rem;
+}
+
+#days.details > li.expanded .recommends {
+  text-align: left;
+}
+
+#days.details > li.expanded .recommends > div {
+  white-space: nowrap;
+}
+
+#days.details > li.expanded .recommends .label {
+  padding-left: 2rem;
+}
+
+/* ---- */
+
+
+#days > li:hover {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+#days > li {
+  cursor: pointer;
+}
+
+#redsky li .stats, 
+#redsky li .recommends {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+#redsky li .recommends .label {
+  display: none;
+  width: 6rem;
+  white-space: nowrap;
+/*
+  -webkit-transition: all .65s .65s;
+  transition: all .65s .65s;
+*/
+}
+
+#redsky li .stats {
+  bottom: 0;
+}
+
+#redsky li .recommends {
+  top: 0;
+  white-space: nowrap;
+  -webkit-transition: all .65s;
+  transition: all .65s;
+}
+
+#redsky .name {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+#redsky .temp {
+  font-size: 3.5em;
+  font-family: 'GothamXL', Helvetica, Arial, sans-serif;
+}
+
+#redsky .name, 
+#redsky .temp > span {
+  font-family: 'GothamXL', Helvetica, Arial, sans-serif;
+}
+
+#redsky .temp > span {
+  font-size: 1.75rem;
+  vertical-align: top;
+  padding-left: .125rem;
+  line-height: 3rem;
+}
+
+#redsky li .recommends .icon, 
+#redsky li .recommends .label {
+  vertical-align: middle;
+}
+
+#redsky li .recommends .icon {
+  display: inline-block;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+#redsky li .other {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  white-space: nowrap;
+  margin: 1.5rem 2rem;
+}
+
+#redsky li .other > div {
+  margin-bottom: .25rem;
+}
+
+/* These also need handling via a spritesheet, to reduce requests */
+#redsky li .recommends > .sunny .icon { background-image: url('../images/content/icon_sunny.svg'); }
+#redsky li .recommends > .muggy .icon { background-image: url('../images/content/icon_muggy.svg'); }
+#redsky li .recommends > .rainy .icon { background-image: url('../images/content/icon_rainy.svg'); }
+#redsky li .recommends > .windy .icon { background-image: url('../images/content/icon_windy.svg'); }
+#redsky li .recommends > .cold .icon { background-image: url('../images/content/icon_cold.svg'); }
+#redsky li .recommends > .smoggy .icon { background-image: url('../images/content/icon_smoggy.svg'); }
+
+
+#menu > ul > li > div, 
+#redsky .ctrl {
+  cursor: pointer;
+}
+
+#redsky .icon, 
+#redsky .ctrl {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#redsky .ctrl.dismiss {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('../images/ctrl_dismiss.svg');
+  margin: 1.5rem;
+}
+
+/* ---- */
+
+/*
+  I *tried* using SVG spritesheets to handle all of these city skylines with 
+  a single file/single request, but getting the spritehseet resizing to work 
+  was proving to be a serious headache. Just have to deal with a load of 
+  individual requests. Sorry. At least it doesn't happen often.
+*/
+
+#redsky .lon { background-image: url('../images/content/lon.svg'); }
+#redsky .nyc { background-image: url('../images/content/nyc.svg'); } 
+#redsky .sfo { background-image: url('../images/content/sfo.svg'); }
+#redsky .lax { background-image: url('../images/content/lax.svg'); }
+#redsky .par { background-image: url('../images/content/par.svg'); }
+#redsky .krk { background-image: url('../images/content/krk.svg'); }
+#redsky .chi { background-image: url('../images/content/chi.svg'); }
+#redsky .sea { background-image: url('../images/content/sea.svg'); }
+#redsky .tyo { background-image: url('../images/content/tyo.svg'); }
+#redsky .sha { background-image: url('../images/content/sha.svg'); }
+#redsky .was { background-image: url('../images/content/was.svg'); }
+#redsky .del { background-image: url('../images/content/del.svg'); }
+#redsky .bla { background-image: url('../images/content/bla.svg'); }
+#redsky .rom { background-image: url('../images/content/rom.svg'); }
+
+/* ---- */
+
+@media only screen and (max-width : 1024px) {
+
+  header {
+    height: 27.5rem;
+  }
+  
+  header .layout {
+    padding: 2rem 0 2.5rem 0;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 0 2.5rem;
+  }
+
+  header {
+      height: 5rem;
+      background-color: rgba(51, 51, 51, .35);
+  }
+
+  #days {
+    margin: 0;
+  }
+
+  #redsky {
+    top: 6.5rem;
+  }
+  
+  #redsky .name {
+    font-size: 1rem;
+  }
+  
+  #redsky .temp {
+    font-size: 3em;
+  }
+  
+  #menu {
+    margin: 0 2rem; 
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  
+  html, body {
+    height: 100%;
+  }
+  
+  header .layout, 
+  #redsky > div, 
+  #menu > ul {
+    max-width: 30rem;
+    min-width: 20rem;
+  }
+
+  header .layout {
+    padding: 1.5rem 0;
+  }
+
+  h1 {
+    margin: 0 0 0 2rem;
+  }
+  
+  #menu > ul > li {
+    white-space: nowrap;
+  }
+
+  #menu > ul > li {
+    flex-basis: 50%;
+    flex-grow: 0;
+    padding: .75rem 0;
+  }
+
+  #redsky {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  #redsky > div {
+  }
+  
+  #days {
+    height: 100%;
+    justify-content: left;
+  }
+  
+  #days > li {
+    background-position: 35% 60%;
+    background-size: auto 60%;
+  }
+  
+  #redsky .name {
+    font-size: .9rem;
+  }
+  
+  #redsky .temp {
+    font-size: 2.25em;
+  }
+  
+  #redsky .temp > span {
+    font-size: 1.125rem;
+    vertical-align: top;
+    padding-left: .0625rem;
+    line-height: 1.5rem;
+  }
+
+  #redsky li .recommends {
+    padding: 5.5rem 0;
+  }
+
+  #redsky li .recommends .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  #days.details > li.expanded .stats {
+    margin: 0 2rem;
+  }
+
+  #redsky .ctrl.dismiss {
+    top: 5rem;
+  }
+
+  #redsky > div > div {
+    background-position: center bottom;
+    background-size: 200% auto;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+}
+
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+}
